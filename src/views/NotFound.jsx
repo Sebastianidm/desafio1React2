@@ -1,11 +1,11 @@
 import React from 'react'
 
-const NotFound = () => {
+function NotFound() {
   return (
     <div className='pt-5'>
-        <h1 className="mb-4">La ruta que intentas consultar no existe :/</h1>
-    </div>
+    <h1 className='text-center'>La ruta que intentas consultar no existe, snif. </h1>
+  </div>
   )
 }
 
-export default NotFound
+export default NotFound; 

@@ -1,24 +1,25 @@
-import React from 'react'
+import React from 'react';
+import { Container } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
-const Contacto = () => {
+function Contacto() {
   return (
-    <div className='d-flex  justify-content-center'>
-        <h1>¿Cuentanos, en que podemos ayudarte?</h1>
-        <form>
-        <div className="form-group">
-        <label for="exampleInputEmail1">Correo</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-        <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu email</small>
-        </div>
-        <div className="form-group">
-        <label for="exampleFormControlTextarea1">Descripcion</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-    </div>
-  )
+    <Container className="text-center">
+      <h1 className="pt-5">
+        Cuéntanos, ¿En qué te podemos ayudar?
+      </h1>
+      <Form>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Ingresa tu correo</Form.Label>
+          <Form.Control type="email" placeholder="nombre@ejemplo.com" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <Form.Label>Añade tus comentarios</Form.Label>
+          <Form.Control as="textarea" rows={3} />
+        </Form.Group>
+      </Form>
+    </Container>
+  );
 }
 
-export default Contacto
+export default Contacto;
